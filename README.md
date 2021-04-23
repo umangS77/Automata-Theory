@@ -12,17 +12,20 @@ python3 qx.py <input_file> <output_file>
 
 ## Video demonstration
 
-[Link](https://www.google.com) for the video demonstration of execution of all the programs.
+[Link](https://drive.google.com/file/d/1hBdp9n3_aH-PEpSfIPycAEJUFFq-d05o/view?usp=sharing) for the video demonstration of execution of all the programs.
 
 
 ## Q1 - Regex to NFA
 
-* We assume that the given regex is valid.  
-* Precedence order:  
+- We assume that the given regex is valid.  
+- Precedence order:  
   '*'  
   '.'  
   '+'
-* The given regex is first segregated into valid tokens and then operations are performed as per the symbol. Then the different results are transformed into a NFA.
+- The given regex is first segregated into valid tokens and then operations are performed as per the symbol. Then the different results are transformed into a NFA.
+
+### NOTE:  
+Some states can be eliminated.
 
 ## Q2 - NFA to DFA  
 
@@ -35,6 +38,9 @@ Then the following relations exist:
 - q(d)=q(n)
 - Σ(d)=Σ(n)
 - Transition matrix is union of all reachable states from a DFA state gives the destination state of DFA.
+
+### NOTE:  
+For some outputs, the order maybe different for a particular state. For example, State {"Q0", "Q2"} may be outputted as state {"Q2", "Q0"}. Both will convey the same result.
 
 ## Q3 - DFA to Regex
 
